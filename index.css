@@ -1,0 +1,86 @@
+html {
+  margin: 0px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0px;
+}
+
+.font_header {
+  font-family: 'Lora', 'Georgia', serif;
+  font-size: xx-large;
+  font-weight: 600;
+  color: #505070;
+}
+
+.font_body {
+  font-family: 'Georgia', 'Vollkorn', serif;
+  font-size: 16pt;
+  line-height: 2;
+  color: #303030;
+}
+
+header {
+  display: flex;
+  width: calc(100% - 1em);
+  margin: 0px;
+  padding: 1em 2em;
+  background-color: #EFEFEF;
+}
+
+header #name {
+  margin: .5em;
+  flex: 5;
+  width: max-content;
+}
+
+header a {
+  margin: .5em;
+  flex: 1;
+  text-decoration-line: none;
+  width: max-content;
+}
+
+a:link {
+  color: #505070;
+}
+
+a:visited {
+  color: #505070;
+}
+
+a:hover {
+  color: #7070A0;
+}
+
+.content {
+  margin: 5%;
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content img {
+  flex: 1;
+}
+
+.content h1 {
+  flex: 4;
+  padding: .5em;
+  font-size: 64px;
+}
+
+.content p {
+  padding-top: 3em;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-indent: 3em;
+}
+
+hr {
+  margin-left: 10%;
+  margin-right: 10%;
+}

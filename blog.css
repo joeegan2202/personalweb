@@ -1,0 +1,23 @@
+#body-text > * {
+  padding-top: 3em;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-indent: 3em;
+}
+
+h1.font_header {
+  padding-top: 3em;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 2%;
+  font-size: 30pt;
+  font-weight: 700;
+}
+
+#date {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14pt;
+  padding-left: 10%;
+  padding-right: 10%;
+}

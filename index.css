@@ -57,7 +57,7 @@ a:hover {
 
 .content {
   margin: 5%;
-  padding: 5%;
+  padding: 0% 5% 0% 5%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -74,7 +74,6 @@ a:hover {
 }
 
 .content p {
-  padding-top: 3em;
   padding-left: 10%;
   padding-right: 10%;
   text-indent: 3em;
@@ -83,4 +82,13 @@ a:hover {
 hr {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+footer {
+  font-style: italic;
+  text-align: center;
+}
+
+footer a {
+  font-style: regular;
 }

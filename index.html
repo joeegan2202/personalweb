@@ -31,11 +31,23 @@
         <p class="font_body">Most of my technical ability is best demonstrated through two projects: <a href="https://github.com/joeegan2202/personalweb">this personal showcase/resume website</a>, and my EduStream project (<a href="https://github.com/joeegan2202/edustream-server">server</a>, <a href="https://github.com/joeegan2202/edustream-web">website</a>, and <a href="https://github.com/joeegan2202/edustream-deploy-server">deployed server</a>). Both are written in <a href="https://golang.org">Go</a> on the backend. This website utilizes a SQLite database for blog post content, and the front-end is written in plain HTML/CSS/JS. I am self-hosting this website, utilizing tools like Nginx to reverse proxy and encrypt traffic to the basic Go HTTP server. My EduStream project used a cloud hosted MySQL database and React on the front-end, and the entire app was hosted in the cloud, beginning in AWS before transitioning to DigitalOcean because of pricing. Explore my GitHub for more of my tinkering and experimenting.</p>
       </div>
       <hr><hr>
-      <div class="content" id="edustream">
-        <h1 class="font_header">EduStream Project</h1>
-        <p class="font_body"></p>
+      <div class="content" id="work">
+        <h1 class="font_header">Work Experience</h1>
+        <img src="work.png" alt="summer work" width="100%" height="100%" style="display: inline;" /><p class="font_body">I have worked for three summers in my high school's technology department. I have taken on many roles and executed many tasks, including running cabling in classrooms, installing hardware in classrooms, reimaging workstations, and providing various other types of technical support. In the technology office, they know me as a dependable employee who is on time and ready to work.</p>
       </div>
       <hr><hr>
+      <div class="content" id="edustream">
+        <h1 class="font_header">EduStream Project</h1>
+        <p class="font_body">This has been my most technically demanding project, involving writing a full-stack web application to livestream video, deploying that technology stack to a cloud hosting service, and solving numerous hurdles throughout the process. I used React to write the front-end website, and that was hosted on an AWS S3 bucket. I used Go and the ffmpeg library on the back-end to write the livestreaming server, and the server was hosted in the cloud on DigitalOcean droplets and DigitalOcean cloud infrastructure. I used a managed MySQL database from DigitalOcean.</p>
+        <p class="font_body">This project was intended to allow schools to livestream video feeds of classroom instruction to kids learning from home due to the COVID pandemic. The system was piloted in my own high school, which involved them installing security-like IP cameras in classrooms and an on-site server that would capture video feeds from the cameras and stream them to a server hosted in the cloud. I wrote all of the software involved, including the server that was deployed on-site to capture video feeds, the cloud server and associated infrastructure that ingested those video feeds and served them to viewers, and the website that streamed video from the server and also provided an administrator portal to monitor individual cameras and classes.</p>
+        <p class="font_body">EduStream, as I named it, and EduStream LLC. eventually failed when my server design encountered performance bottlenecks before I had projected it would, and the demands of school overrode my investment in the project. I was operating on a very limited timescale--I had about two months to write, deploy, and test the system before the start of school--and a non-existent budget to try to pull together a working system and promote it to other schools. Technically, I was able to write working code and improve and fix that code, but I did not have the experience in real-world web development to know the challenges surrounding deploying that code, and I had never architected a system with scalability in mind, and so began on a flawed design.</p>
+        <p class="font_body">In spite of failure, I learned more from working on this project than on any other project I have undertaken. Please check out my code, functional although messy and not well-commented, on my GitHub: <a href="https://github.com/joeegan2202/edustream-server">Cloud server</a>, <a href="https://github.com/joeegan2202/edustream-deploy-server">on-site server</a>, and <a href="https://github.com/joeegan2202/edustream-web">website</a>.</p>
+      </div>
+      <hr><hr>
+      <footer class="content">
+        © Joe Egan 2021<br>
+        Email me at: <a href="mailto:joe@eganshub.net">joe@eganshub.net</a><br>
+      </footer>
     </div>
   </body>
 </html>

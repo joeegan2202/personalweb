@@ -10,7 +10,7 @@ import (
 	"crawshaw.io/sqlite/sqlitex"
 )
 
-//go:embed index.css index.html blog.css blog.html avatar.jpg
+//go:embed index.css index.html blog.css blog.html avatar.jpg work.png
 var f embed.FS
 
 var dbpool *sqlitex.Pool
@@ -28,7 +28,7 @@ func main() {
 
 	http.Handle("/blog/", http.StripPrefix("/blog/", http.HandlerFunc(blog)))
 
-	log.Fatal(http.ListenAndServe(":80", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func blog(w http.ResponseWriter, r *http.Request) {

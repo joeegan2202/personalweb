@@ -4,7 +4,7 @@ WORKDIR /go/src/app
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 8080
 
 RUN apk add build-base
 

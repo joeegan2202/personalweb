@@ -10,7 +10,7 @@ import (
 	"crawshaw.io/sqlite/sqlitex"
 )
 
-//go:embed index.css index.html blog.css blog.html avatar.jpg work.png
+//go:embed index.css index.html blog.css blog.html avatar.jpg work.png admin.html
 var f embed.FS
 
 var dbpool *sqlitex.Pool
@@ -28,7 +28,38 @@ func main() {
 
 	http.Handle("/blog/", http.StripPrefix("/blog/", http.HandlerFunc(blog)))
 
+	http.HandleFunc("/admin/", admin)
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+func admin(w http.ResponseWriter, r *http.Request) {
+	user, pass, ok := r.BasicAuth()
+
+	if !ok {
+		log.Println("Error parsing basic auth")
+		w.Header().Add("WWW-Authenticate", `Basic realm="Give username and password"`)
+		w.WriteHeader(http.StatusUnauthorized)
+		w.Write([]byte(`{"message": "No basic auth present"}`))
+		return
+	}
+
+	if user != "joe" || pass != "joeblogtest" {
+		log.Printf("Username: %s was given (%t) and Password: %s was given (%t)\n", user, user == "joe", pass, pass == "joeblogtest")
+		w.Header().Add("WWW-Authenticate", `Basic realm="Give username and password"`)
+		w.WriteHeader(http.StatusUnauthorized)
+		w.Write([]byte(`{"message": "No basic auth present"}`))
+		return
+	}
+
+	admindata, err := f.ReadFile("admin.html")
+
+	if err != nil {
+		log.Printf("Error reading admin template file: %s\n", err.Error())
+		return
+	}
+
+	w.Write(admindata)
 }
 
 func blog(w http.ResponseWriter, r *http.Request) {
